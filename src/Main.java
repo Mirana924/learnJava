@@ -1,17 +1,14 @@
+import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        int studentAge = 15;
-        double studentGPA = 3.45;
+        System.out.println("Pick a number between 1 and 10");
+        Scanner input = new Scanner(System.in);
 
-        char studentLastInitial = 'H';
-        boolean hasPrefectAttendence = true;
-        String studentName = "Kayla Hammon";
-        char studentFirstInitial = studentName.charAt(0);
-
-        System.out.println(studentAge);
-        System.out.println(studentName);
-        System.out.println(studentFirstInitial);
-
-        System.out.println(studentName + " " + "GPA is" + " " + studentGPA);
+        int inputNum = input.nextInt();
+        if (inputNum < 5) {
+            System.out.println("Enjoy the good luck a friend brings you");
+        } else {
+            System.out.println("Your shoe selection will make you very happy today");
+        }
     }
 }
