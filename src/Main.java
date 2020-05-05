@@ -1,25 +1,26 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        String question = "Which country is the third-largest country?";
-        String choiceOne = "USA";
-        String choiceTwo = "China";
-        String choiceThree = "Australia";
-
-        String correctAnswer = choiceTwo;
-
-        System.out.println(question);
-        System.out.println(choiceOne);
-        System.out.println(choiceTwo);
-        System.out.println(choiceThree);
+        System.out.println("Let's calculate the area of the triangle");
 
         Scanner input = new Scanner(System.in);
-        String userInput = input.next();
 
-        if (userInput.equals("China")) {
-            System.out.println("Congrats! Your answer is correct!");
-        } else {
-            System.out.println("Sorry, the answer is not right.");
+        System.out.println("Please input the base of the triangle (in inches).");
+        double base = input.nextDouble();
+
+        while (base <= 0 ) {
+            System.out.println("That's invalid. Please input the base of the triangle (in inches)");
+            base = input.nextDouble();
         }
+
+        System.out.println("Please input the height of the triangle (in inches)");
+        double height = input.nextDouble();
+        while (height <= 0) {
+            System.out.println("That's invalid. Please input the base of the triangle (in inches)");
+            height = input.nextDouble();
+        }
+
+        double area = (base * height) / 2;
+        System.out.println(("The area is " + area));
     }
 }
